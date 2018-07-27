@@ -6,7 +6,21 @@ The goal of this project is to create a pipeline that can ingest batch and strea
 
 ### Purpose and Common Use Cases
 
+The purpose of the project is to create a system such that any organization attempting to perform analysis on batch and streaming data with a variety of data types is able to handle a) the amount of data that needs to be stored, b) the throughput of the streaming data, and c) perform any intermediary computations, sorting, or preprocessing before using an algorithm to make investment decisions. 
+
 ### Relevant Technologies
+
+There are relevant technologies applicable to each stage of the pipeline.
+
+##### Storing batch data
+
+##### Reading in streaming data
+
+##### Computing financial metrics, sorting, filtering
+
+##### Storing final results
+
+##### Output/dashboarding
 
 ### Proposed Architecture
 
