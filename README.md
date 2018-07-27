@@ -56,6 +56,8 @@ Data -> S3 -> Spark -> mySQL -> Flask
 
 Data -> Kafka -> Spark streaming -> mySQL -> Flask
 
+![alt text](https://github.com/rkhebel/Insight-DE-2018C-Project/blob/master/pipeline.png)
+
 ### Data
 
 ##### Batch Data
