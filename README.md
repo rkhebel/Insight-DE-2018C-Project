@@ -24,6 +24,8 @@ Amazon Kinesis
 
 RabbitMQ
 
+Kafka
+
 ##### Computing financial metrics, sorting, filtering
 
 Spark
