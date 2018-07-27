@@ -14,14 +14,52 @@ There are relevant technologies applicable to each stage of the pipeline.
 
 ##### Storing batch data
 
+S3
+
+HDFS
+
 ##### Reading in streaming data
+
+Amazon Kinesis 
+
+RabbitMQ
 
 ##### Computing financial metrics, sorting, filtering
 
+Spark
+
+Flink
+
+Kinesis Streams
+
+Kafka Streams
+
 ##### Storing final results
+
+MySQL
+
+Redis
 
 ##### Output/dashboarding
 
+Flask
+
 ### Proposed Architecture
 
+##### Batch Pipeline
+
+Data -> S3 -> Spark -> mySQL -> Flask
+
+##### Stream Pipeline
+
+Data -> Kafka -> Spark streaming -> mySQL -> Flask
+
 ### Data
+
+##### Batch Data
+
+XBRL Financial Statements and Notes Data from the SEC (~20GB), tab-deliminated files containing numeric and textual information
+
+##### Streaming Data
+
+Variety of sources (NYSE, Federal Reserve, Yahoo Finance, Google Finance). To start, I plan on using historical data to simulate a stream which will also allow me to stress test the system 
