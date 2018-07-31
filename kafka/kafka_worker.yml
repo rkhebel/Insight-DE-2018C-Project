@@ -1,0 +1,10 @@
+purchase_type: on_demand
+subnet_id: SUBNET_ID
+num_instances: 2
+key_name: KEY_NAME
+security_group_ids: SECURITY_GROUP_ID
+instance_type: m4.large
+tag_name: kafka_cluster
+vol_size: 100
+role: worker
+use_eips: true
