@@ -1,0 +1,2 @@
+Automate setting up clusters
+  - make sure bc package makes it (use scp w/ a local version of bc and use ssh to move into usr/bin
