@@ -2,4 +2,7 @@ Automate setting up clusters
   - make sure bc package makes it (use scp w/ a local version of bc and use ssh to move into usr/bin
   
 Submitting spark job on ec2:
-spark-submit --master spark://35.155.254.95:7077 --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.1.0 --jars /usr/local/spark/jars/mysql-connector-java-5.0.8-bin-g.jar preprocessing.pyscp -i ryanhebel-IAM-keypair.pem Spark/preprocessing.py ubuntu@ec2-35-155-254-95.us-west-2.compute.amazonaws.com:~
+spark-submit --master spark://35.155.254.95:7077 --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.1.0 --jars /usr/local/spark/jars/mysql-connector-java-5.0.8-bin-g.jar preprocessing.py
+scp -i ryanhebel-IAM-keypair.pem Spark/preprocessing.py ubuntu@ec2-35-155-254-95.us-west-2.compute.amazonaws.com:~
+
+move actual raw data to own s3 bucket
