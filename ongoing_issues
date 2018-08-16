@@ -5,4 +5,6 @@ Submitting spark job on ec2:
 spark-submit --master spark://35.155.254.95:7077 --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.1.0 --jars /usr/local/spark/jars/mysql-connector-java-5.0.8-bin-g.jar preprocessing.py
 scp -i ryanhebel-IAM-keypair.pem Spark/preprocessing.py ubuntu@ec2-35-155-254-95.us-west-2.compute.amazonaws.com:~
 
+ df.write.jdbc(url = 'jdbc:postgresql://54.203.124.124:5432/postgres' , table = 'transactions', mode='append', properties = {'user' : 'postgres', 'password' : 'password', 'driver' : 'org.postgresql.Driver'})
+
 move actual raw data to own s3 bucket
