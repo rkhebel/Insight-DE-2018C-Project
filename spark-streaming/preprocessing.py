@@ -13,20 +13,6 @@ from pyspark.streaming.kafka import KafkaUtils
 from pyspark.sql import SQLContext
 import psycopg2
 
-"""
-def sendBuyToSQL(rdd):
-        if not rdd.isEmpty():
-                df = rdd.take(rdd.count())
-                connection = psycopg2.connect(host = 'POSTGRESQL_IP_ADDRESS', database = 'DB_NAME', user = 'DB_USER', password = 'DB_PASSWORD')
-                cursor = connection.cursor()
-                for line in df:
-                        query = 'INSERT INTO transactions VALUES (%s, %s, %s, %s, %s)'
-                        data = (line[0], line[1], line[2], line[3], line[4])
-                        cursor.execute(query, data)
-                connection.commit()
-                connection.close()      
-"""
-
 def sendBuyToSQL(rdd):
         connection = psycopg2.connect(host = 'POSTGRESQL_IP_ADDRESS', database = 'DB_NAME', user = 'DB_USER', password = 'DB_PASSWORD')
         cursor = connection.cursor()
