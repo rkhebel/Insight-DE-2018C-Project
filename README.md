@@ -6,10 +6,6 @@ Tradr is a platofrm that facilitates real time trading for retail investors. Tra
 
 ![alt_text](https://github.com/rkhebel/Insight-DE-2018C-Project/blob/master/images/screenshot.png)
 
-### Purpose and Common Use Cases
-
-The purpose of the project is to create a system such that any organization attempting to perform analysis on batch and streaming data with a variety of data types is able to handle a) the amount of data that needs to be stored, b) the throughput of the streaming data, and c) perform any intermediary computations, sorting, or preprocessing before using an algorithm to make investment decisions. 
-
 ### Architecture
 
 Data -> Kafka -> Spark streaming -> mySQL -> Flask
@@ -18,4 +14,5 @@ Data -> Kafka -> Spark streaming -> mySQL -> Flask
 
 ### Dataset
 
-Variety of sources (NYSE, Federal Reserve, Yahoo Finance, Google Finance). To start, I plan on using historical data to simulate a stream which will also allow me to stress test the system 
+The dataset that I used to stream data into Tradr is the [Deutsche Börse Public Dataset (PDS)](https://github.com/Deutsche-Boerse/dbg-pds). This data is provided on a minute-by-minute basis and aggregated from the Xetra and Eurex engines, which comprise a variety of equities, funds and derivative securities. The PDS contains details for on a per security level, detailing trading activity by minute including the high, low, first and last prices within the time period. I accessed the data via the S3.
+
