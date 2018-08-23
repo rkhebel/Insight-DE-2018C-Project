@@ -12,8 +12,6 @@ I thought it would be very interesting to explore what kind of infrastructure is
 
 ### Architecture
 
-Data -> Kafka -> Spark streaming -> mySQL -> Flask
-
 ![alt text](https://github.com/rkhebel/Insight-DE-2018C-Project/blob/master/images/pipeline.png)
 
 ### Dataset
